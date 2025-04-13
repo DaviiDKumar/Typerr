@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+
+
+.left-15 {
+  margin-left: 15vw;
+  padding: var(--spacing-lg);
+  z-index: 3;
+}
+
+/* =====================
+   Font Family Assignments
+   ===================== */
+body {
+ 
+  font-family: 'Geo', sans-serif;
+}
+
+h1 {
+  font-family: 'Passero One', cursive;
+}
+
+h2,
+button {
+  font-family: 'Iceland', sans-serif;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+strong {
+  font-family: 'Alegreya SC', serif;
+}

@@ -1,0 +1,141 @@
+/* index.css */
+
+/* =====================================================
+   :root - Theme Variables
+   ===================================================== */
+   :root {
+    /* === Base Colors (from your palette) === */
+    --color-1: #FBB1CC; /* Light pink */
+    --color-2: #EAD7E5; /* Soft lavender/pink */
+    --color-3: #f3fdfb; /* Light blue */
+    --color-4: #B1D2D2; /* Grey-green */
+    --color-5: #F31667; /* Warm peach */
+  
+    /* === Backgrounds with Gradients === */
+    /* Body background uses a gradient from color-1 to color-2 */
+    --bg-body:  var(--color-3);
+    /* Container background uses a gradient from color-3 to color-4 */
+    --bg-container: linear-gradient(95deg,var(--color-2), var(--color-4));
+    /* Accent color for elements like buttons, etc. */
+    --bg-accent: var(--color-5);
+  
+    /* === Text Colors === */
+    /* Primary and heading texts use darker shades for contrast */
+    --text-primary: #1F1F1F;
+    --text-secondary: #000000;
+    --text-heading: #1e7dbd;
+    /* Links */
+    --text-link: #004C6D;
+    --text-link-hover: #0077A8;
+  
+    /* === UI & Button Colors === */
+    --btn-primary-bg: var(--color-5);
+    --btn-primary-bg-hover: #c30047; /* slightly darker */
+  
+    /* === Typography (Using clamp() for responsiveness) === */
+    
+    --font-size-base: clamp(1rem, 1vw + 0.5rem, 2.125rem);
+    --font-size-h1: clamp(2.2rem, 4vw + 1rem, 4rem);
+    --font-size-h2: clamp(1.85rem, 3.5vw + 1rem, 3.1rem);
+    --font-size-h3: clamp(1.65rem, 3vw + 0.5rem, 2.5rem);
+    --font-size-h4: clamp(1.5rem, 2.5vw + 0.5rem, 1.75rem);
+    --font-size-h5: clamp(1.2rem, 2vw + 0.25rem, 1.5rem);
+    --font-size-h6: clamp(1.1rem, 1.5vw + 0.25rem, 1.25rem);
+    --font-size-p: var(--font-size-base);
+    --font-size-small: clamp(0.875rem, 1vw, 1rem);
+    --font-size-button: clamp(1rem, 1vw + 0.25rem, 1.125rem);
+  
+    --line-height: 1.4;
+    --letter-spacing: 0.02em;
+  
+    /* === Spacing (in rem) === */
+    --spacing-xs: 0.25rem;  /* 4px */
+    --spacing-sm: 0.5rem;   /* 8px */
+    --spacing-md: 1rem;     /* 16px */
+    --spacing-lg: 1.5rem;   /* 24px */
+    --spacing-xl: 2rem;     /* 32px */
+    --spacing-xxl: 3rem;    /* 48px */
+  
+    /* === Radius & Shadows === */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+  
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 0.125rem 0.25rem var(--shadow-color);
+    --shadow-md: 0 0.25rem 0.5rem var(--shadow-color);
+    --shadow-lg: 0 0.5rem 1rem var(--shadow-color);
+  }
+  
+  /* =====================================================
+     Global Reset & Base Styles
+     ===================================================== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  /* =====================================================
+     Typography
+     ===================================================== */
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-heading);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+  }
+  
+  h1 { font-size: var(--font-size-h1); }
+  h2 { font-size: var(--font-size-h2); }
+  h3 { font-size: var(--font-size-h3); }
+  h4 { font-size: var(--font-size-h4); }
+  h5 { font-size: var(--font-size-h5); }
+  h6 { font-size: var(--font-size-h6); }
+  
+  
+  /* Paragraphs */
+  p {
+    font-size: var(--font-size-p);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+  }
+  
+  /* Links */
+  a {
+    color: var(--text-link);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: var(--text-link-hover);
+  }
+  
+  /* Bold Text */
+  strong {
+    color: var(--text-heading);
+    font-weight: bold;
+  }
+  
+  /* =====================================================
+     Buttons
+     ===================================================== */
+  button {
+    font-size: var(--font-size-button);
+    background: var(--btn-primary-bg);
+    color: var(--text-button);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  button:hover {
+    background: var(--btn-primary-bg-hover);
+    box-shadow: var(--shadow-md);
+  }
+  
